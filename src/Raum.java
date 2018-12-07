@@ -1,5 +1,6 @@
 
 public class Raum {
+		
 	private String raumNummer;
 	private int maxSitzplaetze;
 	private Raumtyp raumtyp;

@@ -10,7 +10,7 @@ public class Schueler extends Person {
 	
 	private int katalognummer;
 	private boolean eigenberechtigung;
-	private Date eintrifttsdatum;
+	private Date eintrittsdatum;
 	
 	public  int getKatalognummer() {
 		return this.katalognummer;
@@ -20,6 +20,6 @@ public class Schueler extends Person {
 		return this.eigenberechtigung;
 	}
 	public Date getEintrittsdatum() {
-		
+		return this.eintrittsdatum;
 	}
 }
