@@ -1,4 +1,5 @@
 
+
 public class Fach {
 	private String name;
 	private int wochenstunden;
@@ -11,6 +12,6 @@ public class Fach {
 		return this.wochenstunden;
 	}
 	public Raumtyp getRaumanforderung() {
-		
+		return raumanforderungen;
 	}
 }
