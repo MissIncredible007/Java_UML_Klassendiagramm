@@ -2,8 +2,8 @@ import java.util.Date;
 
 public class Schueler extends Person {
 	
-	Schueler(long svrn, String vorname, String nachname, Date geburtsdatum, String email, int katalognummer, boolean eigenberechtigung, Date eintrifftsdatum){
-		super(svnr, vorname, nachname, geburtsdatum, email);
+	Schueler(long svnr, String vorname, String nachname, Date geburtsdatum, String email, Adresse wohnort, int katalognummer, boolean eigenberechtigung, Date eintrifftsdatum){
+		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
 	}
 	
 		
