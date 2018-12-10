@@ -1,15 +1,15 @@
 import java.util.Date;
 
 public class Person {
-	private long svrn;
+	private long svnr;
 	private String vorname;
 	private String nachname;
 	private Date geburtsdatum;
 	private String email;
 	private Adresse wohnort;
 	
-	public Person(long svrn, String vorname, String nachname, Date geburtsdatum, String email, Adresse wohnort) {
-		this.svrn = svrn;
+	public Person(long svnr, String vorname, String nachname, Date geburtsdatum, String email, Adresse wohnort) {
+		this.svnr = svnr;
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.geburtsdatum = geburtsdatum;
@@ -19,7 +19,7 @@ public class Person {
 	
 	
 	public long getSvnr() {
-		return this.svrn;
+		return this.svnr;
 	}
 
 	public String getVorname() {
