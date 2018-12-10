@@ -6,13 +6,15 @@ public class Person {
 	private String nachname;
 	private Date geburtsdatum;
 	private String email;
+	private Adresse wohnort;
 	
-	public Person(long svrn, String vorname, String nachname, Date geburtsdatum, String email) {
+	public Person(long svrn, String vorname, String nachname, Date geburtsdatum, String email, Adresse wohnort) {
 		this.svrn = svrn;
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.geburtsdatum = geburtsdatum;
 		this.email = email;
+		this.wohnort = wohnort;
 	}
 	
 	
@@ -35,4 +37,10 @@ public class Person {
 	public String getEmail() {
 		return this.email;
 	}
+
+
+	public Adresse getWohnort() {
+		return wohnort;
+	}
+
 }
