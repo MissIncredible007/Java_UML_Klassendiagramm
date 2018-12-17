@@ -11,6 +11,6 @@ public class Adresse {
 		this.strasse = strasse;
 		this.hausnummer = hausnummer; 
 		this.plz = plz;
-		
 	}
+	
 }
