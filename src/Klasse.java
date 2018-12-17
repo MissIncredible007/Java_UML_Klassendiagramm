@@ -10,8 +10,6 @@ public class Klasse {
 	
 	
 	
-	
-	
 	public String getBezeichnung(){
 		return this.bezeichnung;
 	}
@@ -27,10 +25,17 @@ public class Klasse {
 	}
 	
 	public boolean setKlassensprecher(Schueler schueler) {
-		return 
+		
 	}
+	
 	public boolean addSchueler(Schueler schueler){
-		return		
+		if(this.schuelerliste.size() <= 36) {
+			this.schuelerliste.add(schueler);
+			return true;
+		}
+		else {
+			return false;
+		}
 				
 	}
 	public void exportStundenplan() {
@@ -38,6 +43,7 @@ public class Klasse {
 		
 	}
 	
+	//Verbindungen
 	public List<Schueler> getSchueler() {
 		return this.schuelerliste;
 	}
