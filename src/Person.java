@@ -1,14 +1,15 @@
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Person {
 	private long svnr;
 	private String vorname;
 	private String nachname;
-	private Date geburtsdatum;
+	private LocalDate geburtsdatum;
 	private String email;
 	private Adresse wohnort;
 	
-	public Person(long svnr, String vorname, String nachname, Date geburtsdatum, String email, Adresse wohnort) {
+	public Person(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort) {
 		this.svnr = svnr;
 		this.vorname = vorname;
 		this.nachname = nachname;
@@ -30,7 +31,7 @@ public class Person {
 		return this.nachname;
 	}
 	
-	public Date getGeburtsdatum() {
+	public LocalDate getGeburtsdatum() {
 		return this.geburtsdatum;
 	}
 	
@@ -41,6 +42,11 @@ public class Person {
 
 	public Adresse getWohnort() {
 		return wohnort;
+	}
+	
+	public int getAlter() {
+		Period y = Period.between(this.geburtsdatum,LocalDate.now());
+		return y.getYears();
 	}
 
 }
