@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Person {
+public abstract class Person {
 	private long svnr;
 	private String vorname;
 	private String nachname;

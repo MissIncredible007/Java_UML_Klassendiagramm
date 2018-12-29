@@ -8,10 +8,6 @@ public class Klasse {
 	
 	List<Schueler> schuelerliste  = new ArrayList<>();
 	
-	
-	
-	
-	
 	public String getBezeichnung(){
 		return this.bezeichnung;
 	}

@@ -1,16 +1,15 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Schueler extends Person {
 	
-	Schueler(long svnr, String vorname, String nachname, Date geburtsdatum, String email, Adresse wohnort, int katalognummer, boolean eigenberechtigung, Date eintrifftsdatum){
-		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
-	}
-	
-		
 	private int katalognummer;
 	private boolean eigenberechtigung;
-	private Date eintrittsdatum;
-	
+	private LocalDate eintrittsdatum;
+
+	Schueler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort, int katalognummer, boolean eigenberechtigung, LocalDate eintrittsdatum){
+		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
+	}
+		
 	public  int getKatalognummer() {
 		return this.katalognummer;
 	}
@@ -18,7 +17,7 @@ public class Schueler extends Person {
 	public boolean isEigenberechtigt() {
 		return this.eigenberechtigung;
 	}
-	public Date getEintrittsdatum() {
+	public LocalDate getEintrittsdatum() {
 		return this.eintrittsdatum;
 	}
 }
