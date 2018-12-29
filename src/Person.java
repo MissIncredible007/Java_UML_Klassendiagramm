@@ -4,7 +4,7 @@ import java.time.Period;
 public abstract class Person {
 	private long svnr;
 	private String vorname;
-	private String nachname;
+	protected String nachname;
 	private LocalDate geburtsdatum;
 	private String email;
 	private Adresse wohnort;

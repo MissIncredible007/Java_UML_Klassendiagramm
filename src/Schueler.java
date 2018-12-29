@@ -1,38 +1,39 @@
+import java.time.LocalDate;
 
 public class Schueler extends Person {
 	
-<<<<<<< HEAD
-	private int katalognummer;
-	private boolean eigenberechtigung;
-	private LocalDate eintrittsdatum;
-
-	Schueler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort, int katalognummer, boolean eigenberechtigung, LocalDate eintrittsdatum){
-		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
-	}
-		
-=======
-	Schueler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort, int katalognummer, boolean eigenberechtigung, LocalDate eintrittsdatum, String klassenbezeichnung, boolean klassensprecher){
+	Schueler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort){
 		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
 	}
 	
-	
-		
 	private int katalognummer;
-	private boolean eigenberechtigung;
-	private LocalDate eintrittsdatum;
 	private String klassenbezeichnung;
-	private boolean klassensprecher;
+	private boolean klassensprecher = false;
 	
->>>>>>> master
 	public  int getKatalognummer() {
 		return this.katalognummer;
 	}
 	
-	public boolean isEigenberechtigt() {
-		return this.eigenberechtigung;
+	// Eigenberechtigung berechnen
+	public boolean isEigenberechtigt() {	
+		if(this.getAlter() >= 18) return true;
+		else return false;
 	}
-	public LocalDate getEintrittsdatum() {
-		return this.eintrittsdatum;
+	
+	
+	// Fürs Ordnen nach Nachnamen der Schüler in der Klasse
+	public String getNachname() {
+		return super.getNachname();
+	}
+
+	public void setKlassensprecher(boolean truefalse) {
+		this.klassensprecher = truefalse;
+	}
+	
+	
+	
+	public boolean getKlassensprecher() {
+		return this.klassensprecher;	
 	}
 		
 	
