@@ -24,5 +24,6 @@ public class Schueler extends Person {
 	public LocalDate getEintrittsdatum() {
 		return this.eintrittsdatum;
 	}
-	public 
+		
+	
 }
