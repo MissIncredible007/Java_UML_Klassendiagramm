@@ -4,7 +4,20 @@ import java.util.List;
 public class Schule {
 	private String name;
 	private Long schulkennzahl;
-	private List<Abteilung> abteilungen = new ArrayList<>();
+	public List<Abteilung> abteilungen = new ArrayList<>();
+	
+	public Schule(String name, Long schkz) {
+		this.name = name;
+		this.schulkennzahl = schkz;
+	}
+	
+	public Schule(String name, Long schkz, List<Abteilung> abteilungen) {
+		this.name = name;
+		this.schulkennzahl = schkz;
+		for(Abteilung a : abteilungen) {
+			this.addAbteilung(a.name, a.kuerzel);
+		}
+	}
 	
 	public List<Schueler> getSchueler() {
 		List<Schueler> alleSchueler = new ArrayList<>();

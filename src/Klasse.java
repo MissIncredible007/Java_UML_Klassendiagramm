@@ -8,8 +8,11 @@ public class Klasse {
 	
 	List<Schueler> schuelerliste  = new ArrayList<>();
 	
+<<<<<<< HEAD
+=======
 	
 	
+>>>>>>> master
 	public String getBezeichnung(){
 		return this.bezeichnung;
 	}
