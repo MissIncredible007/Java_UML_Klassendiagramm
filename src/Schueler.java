@@ -2,16 +2,22 @@ import java.time.LocalDate;
 
 public class Schueler extends Person {
 	
+	//private int katalognummer;
+	private String klassenbezeichnung;
+	private boolean klassensprecher = false;
+	private int katalognummer;
+	private int schulstufe;
+	
 	Schueler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort){
 		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
 	}
 	
-	private int katalognummer;
-	private String klassenbezeichnung;
-	private boolean klassensprecher = false;
-	
 	public  int getKatalognummer() {
 		return this.katalognummer;
+	}
+	
+	public void setKatalognummer(int nr) {
+		this.katalognummer = nr;
 	}
 	
 	// Eigenberechtigung berechnen
@@ -19,22 +25,31 @@ public class Schueler extends Person {
 		if(this.getAlter() >= 18) return true;
 		else return false;
 	}
-	
-	
-	// Fürs Ordnen nach Nachnamen der Schüler in der Klasse
-	public String getNachname() {
-		return super.getNachname();
-	}
 
 	public void setKlassensprecher(boolean truefalse) {
 		this.klassensprecher = truefalse;
 	}
 	
-	
-	
 	public boolean getKlassensprecher() {
 		return this.klassensprecher;	
 	}
+	
+	public void setKlassenbezeichnung(String bezeichnung) {
+		this.klassenbezeichnung = bezeichnung;
+	}
+	
+	public String getKlassenbezeichnung() {
+		return this.klassenbezeichnung;
+	}
+	
+	public int getSchulstufe() {
+		return this.schulstufe;
+	}
+
+	public void setSchulstufe(int schulstufe) {
+		this.schulstufe = schulstufe;
 		
+	}
+	
 	
 }
