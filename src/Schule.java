@@ -34,7 +34,7 @@ public class Schule {
 		//return neueAbteilung;
 	}
 		
-	private class Abteilung {
+	class Abteilung {
 		private String kuerzel;
 		private String name;
 		private List<Klasse> klassen = new ArrayList<>();
@@ -60,8 +60,13 @@ public class Schule {
 			return alleSchueler;
 		}
 
+		public Klasse addKlasse (Klasse k) {
+			this.klassen.add(k);
+			return k;
+		}
+		
 		public List<Klasse> getKlassen() {
-			return klassen;
+			return this.klassen;
 		}
 	}
 
