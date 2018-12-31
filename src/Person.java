@@ -9,7 +9,7 @@ public abstract class Person {
 	private String email;
 	private Adresse wohnort;
 	
-	public Person(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort) {
+	public Person(String vorname, String nachname, LocalDate geburtsdatum, long svnr, String email, Adresse wohnort) {
 		this.svnr = svnr;
 		this.vorname = vorname;
 		this.nachname = nachname;
@@ -17,7 +17,6 @@ public abstract class Person {
 		this.email = email;
 		this.wohnort = wohnort;
 	}
-	
 	
 	public long getSvnr() {
 		return this.svnr;
@@ -31,6 +30,10 @@ public abstract class Person {
 		return this.nachname;
 	}
 	
+	public String getName(){
+		return this.vorname+" "+this.nachname;
+	}
+	
 	public LocalDate getGeburtsdatum() {
 		return this.geburtsdatum;
 	}
@@ -39,7 +42,6 @@ public abstract class Person {
 		return this.email;
 	}
 
-
 	public Adresse getWohnort() {
 		return wohnort;
 	}
@@ -47,6 +49,10 @@ public abstract class Person {
 	public int getAlter() {
 		Period y = Period.between(this.geburtsdatum,LocalDate.now());
 		return y.getYears();
+	}
+	
+	public void printWohnort() {
+		this.wohnort.printAdresse();
 	}
 
 }

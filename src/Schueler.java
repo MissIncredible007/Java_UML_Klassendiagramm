@@ -8,8 +8,8 @@ public class Schueler extends Person {
 	private int katalognummer;
 	private int schulstufe;
 	
-	Schueler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email, Adresse wohnort){
-		super(svnr, vorname, nachname, geburtsdatum, email, wohnort);
+	Schueler(String vorname, String nachname, LocalDate geburtsdatum, long svnr, String email, Adresse wohnort){
+		super(vorname, nachname, geburtsdatum, svnr, email, wohnort);
 	}
 	
 	public  int getKatalognummer() {

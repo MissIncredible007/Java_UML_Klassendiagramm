@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import java.util.TreeSet;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -8,19 +5,14 @@ public class Klasse {
 
 	private String bezeichnung;
 	private int schulstufe;
-	TreeSet<Schueler> schuelerListe = new TreeSet<>(new NachnameVergleich());
+	TreeSet<Schueler> schuelerListe = new TreeSet<>(new NamenVergleich());
 	
-	Klasse(String bezeichnung, int schulstufe){
+	Klasse(int schulstufe, String bezeichnung){
 		this.bezeichnung = bezeichnung;
 		this.schulstufe = schulstufe;
 	}
 		
-	class NachnameVergleich implements Comparator<Schueler>{
-		 
-	    public int compare(Schueler s1, Schueler s2) {
-	        return s1.getNachname().compareTo(s2.getNachname());
-	    }
-	}
+	
 	
 	public String getBezeichnung(){
 		return this.bezeichnung;
@@ -59,7 +51,7 @@ public class Klasse {
 		// Ob es schon einen gibt
 		try {
 			this.getKlassensprecher();
-		} catch (Exception e) { // Nur wenn es noch keinen Klassensprecher gibt, wählen
+		} catch (Exception e) { // Nur wenn es noch keinen Klassensprecher gibt, waehlen
 			int i=0, random = ThreadLocalRandom.current().nextInt(0, schuelerListe.size());
 			//System.out.println("rand: "+random);
 			for(Schueler S : this.schuelerListe) {
@@ -80,7 +72,7 @@ public class Klasse {
 				return S;
 			}
 		}
-		throw new Exception("Kein Klassensprecher gewählt!");
+		throw new Exception("Kein Klassensprecher gewaehlt!");
 	}
 	
 	public void exportStundenplan() {

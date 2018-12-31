@@ -13,4 +13,8 @@ public class Adresse {
 		this.plz = plz;
 	}
 	
+	public void printAdresse(){
+		System.out.println("Adresse:\n "+strasse+" "+hausnummer+"\n "+plz+" "+ort);
+	}
+	
 }
