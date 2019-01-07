@@ -8,6 +8,7 @@ public class Schule {
 	private String schultyp;
 	private Lehrer Direktor;
 	private TreeSet<Abteilung> abteilungen = new TreeSet<>(new AbteilungsVergleich());
+	private TreeSet<NichtLehrpersonal> personal;
 		
 	public Schule(String name, Long schkz, String schultyp) {
 		this.name = name;
@@ -86,7 +87,14 @@ public class Schule {
 		}
 		return alleLehrer;
 	}
+	
+	public void addPersonal(NichtLehrpersonal neuesPersonal) throws Exception {
+		this.personal.add(neuesPersonal);		
+	}
 
+	public TreeSet<NichtLehrpersonal> getPersonal(){
+		return this.personal;
+	}
 
 	public String getSchultyp() {
 		return schultyp;
@@ -136,6 +144,7 @@ public class Schule {
 			neuerLehrer.setKuerzel(lehrerKuerzel);
 			this.lehrer.add(neuerLehrer);		
 		}
+		
 		
 		private String generateLehrerKuerzel(Lehrer neuerLehrer) {
 			String lehrerKuerzel;
