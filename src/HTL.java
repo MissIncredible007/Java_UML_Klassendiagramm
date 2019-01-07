@@ -12,7 +12,7 @@ public class HTL {
 		htlstp.addAbteilung("Elektronik und Technische Informatik", "EL");
 		htlstp.addAbteilung("Informatik", "IF");
 		
-		// Schwebende Klasse erstellen
+		//'Schwebende'Klasse erstellen
 		Klasse FBHELS = new Klasse(5,"BHELS");
 		Klasse VBHELS = new Klasse(4,"BHELS");
 
@@ -31,10 +31,10 @@ public class HTL {
 			System.out.println(e);
 		}
 		
-		// Schwebende Lehrer erstellen
+		//'Schwebende'Lehrer erstellen
 		Lehrer Kern = new Lehrer("Gunter","Kern",LocalDate.of(1989, 12, 1), 2123, "g.kerni@hotmail.com", new Adresse("Hupfing", "Musterstr.", 12, 1234));
-		Lehrer Mueller = new Lehrer("Anton","Andreas",LocalDate.of(1979, 2, 21), 2343, "h.muello@hotmail.de", new Adresse("Hintertupf", "Ing. Jansestr.", 112, 1754));
-		Lehrer Mueller2 = new Lehrer("Tzwirbel","Wind",LocalDate.of(1979, 2, 21), 2343, "h.muello@hotmail.de", new Adresse("Hintertupf", "Ing. Jansestr.", 112, 1754));
+		Lehrer Mueller = new Lehrer("Anton","Mueller",LocalDate.of(1979, 2, 21), 2343, "h.muello@hotmail.de", new Adresse("Hintertupf", "Ing. Jansestr.", 112, 1754));
+		Lehrer Muehler = new Lehrer("Anton","Muehler",LocalDate.of(1979, 2, 21), 2343, "h.muello@hotmail.de", new Adresse("Hintertupf", "Ing. Jansestr.", 112, 1754));
 
 		// Lehrer zu einer Abteilung hinzufügen
 		try {
@@ -50,12 +50,12 @@ public class HTL {
 		}
 		
 		try {
-			htlstp.getAbteilung("IF").addLehrer(Mueller2);
+			htlstp.getAbteilung("IF").addLehrer(Muehler);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		
-		// 'Schwebende' Schüler erstellen
+		//'Schwebende'Schüler erstellen
 		Schueler Agnes = new Schueler("Agnes", "Thalhammer", 	LocalDate.of(1999, 11, 01), 3030, "agnes.thalhammer@gmx.at", new Adresse ("Kleinzell", "Innerhalbach", 30, 3171));
 		Schueler Baldrian = new Schueler("Baldrian", "Burger", 	LocalDate.of(2001, 11, 01), 3030, "agnes.thalhammer@gmx.at", new Adresse ("Kleinzell", "Innerhalbach", 30, 3171));
 		Schueler Clemens = new Schueler("Clemens", "Annanas", 	LocalDate.of(2000, 12, 29), 3030, "agnes.thalhammer@gmx.at", new Adresse ("Kleinzell", "Innerhalbach", 30, 3171));
