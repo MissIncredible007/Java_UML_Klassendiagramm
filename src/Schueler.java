@@ -10,10 +10,19 @@ public class Schueler extends Person {
 	
 	Schueler(String vorname, String nachname, LocalDate geburtsdatum, long svnr, String email, Adresse wohnort){
 		super(vorname, nachname, geburtsdatum, svnr, email, wohnort);
+		System.out.println(this.getVorname()+" ist Schüler!");
 	}
 	
+	
 	public  int getKatalognummer() {
+		try {
+			HTL.htlstp.getAbteilung("EL");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
 		return this.katalognummer;
+		
 	}
 	
 	public void setKatalognummer(int nr) {

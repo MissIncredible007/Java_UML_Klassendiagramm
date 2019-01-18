@@ -1,6 +1,5 @@
-
-
-public enum Raumtyp{
+public enum Raumtyp {
 		KLASSENZIMMER,
-		LABORRAUM;
-	}
+		LABORRAUM, 
+		KAFFEEHAUS;
+}
